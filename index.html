@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="我发现了石油 - 探索地下的黑色金子，了解石油的勘探、开采技术、能源应用及对现代社会的重要性。">
+    <meta name="keywords" content="我发现了石油, 石油勘探, 能源开发, 地质学, 石油开采, 黑色金子">
+    <title>我发现了石油 - 能源探索与开采技术指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #0d47a1;
+            --accent-color: #ff6f00;
+            --text-dark: #212121;
+            --text-gray: #5f6368;
+            --bg-light: #f5f5f5;
+            --bg-white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1.5rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-left: 1rem;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: #e65100;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-solid {
+            background: var(--accent-color);
+            border: 2px solid var(--accent-color);
+            color: white;
+        }
+
+        .btn-solid:hover {
+            background: #e65100;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 111, 0, 0.3);
+        }
+
+        /* Introduction */
+        .intro {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-gray);
+        }
+
+        .intro-image {
+            width: 100%;
+            height: 350px;
+            background-color: #ddd;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Exploration Process */
+        .process {
+            padding: 4rem 0;
+        }
+
+        .process-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Applications */
+        .applications {
+            padding: 4rem 0;
+            background-color: var(--bg-white);
+        }
+
+        .app-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .app-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 6px;
+        }
+
+        .app-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .app-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Facts & Figures */
+        .stats {
+            padding: 4rem 0;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #cfd8dc;
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #37474f;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span>⛽</span> 我发现了石油
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">关于石油</a></li>
+                    <li><a href="#process">开采流程</a></li>
+                    <li><a href="#applications">应用领域</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">联系我们</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>我发现了石油：开启现代文明的黑色金子</h1>
+                <p>从地底深处到您的车窗，石油是驱动世界运转的血液。深入了解石油的形成、勘探技术及其对现代社会的深远影响。</p>
+                <div class="hero-buttons">
+                    <a href="#process" class="btn btn-solid">探索开采技术</a>
+                    <a href="#applications" class="btn btn-outline">了解应用领域</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="intro" class="intro">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <h2 class="section-title">什么是“我发现了石油”？</h2>
+                        <p class="section-subtitle">不仅是资源的发现，更是工业革命的催化剂</p>
+                        <p>当我们谈论“我发现了石油”时，我们指的是人类历史上最重大的发现之一。石油，又称原油，是一种粘稠的、深褐色或暗绿色的液体矿物。它主要由各种烃类化合物组成，包括烷烃、环烷烃和芳香烃。</p>
+                        <p>石油的形成是一个漫长而复杂的地质过程，通常需要数百万年的时间，由古代海洋生物的遗骸在高温高压下演变而成。这一发现彻底改变了人类获取能源的方式，从早期的薪柴和煤炭，转向了更高效、更便携的液体燃料。</p>
+                        <p>在现代社会，石油不再仅仅是一种燃料，它更是塑料、化肥、橡胶、沥青乃至众多合成材料的来源。它是工业的粮食，也是国家经济的重要命脉。</p>
+                    </div>
+                    <div class="intro-image">
+                        <!-- Placeholder for Oil Rig or Refinery Image -->
+                        <img src="https://picsum.photos/seed/oilrig/600/400.jpg" alt="石油勘探钻井平台">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exploration Process -->
+        <section id="process" class="process">
+            <div class="container">
+                <h2 class="section-title">石油勘探与开采流程</h2>
+                <p class="section-subtitle">如何从地底深处提取这一宝贵资源？</p>
+                
+                <div class="process-cards">
+                    <article class="card">
+                        <div class="card-icon">🔍</div>
+                        <h3>1. 地质勘探</h3>
+                        <p>在发现石油之前，地质学家首先会进行地质调查。通过地震波反射技术、重力测量和磁力测量，科学家可以推断地下的岩层结构，寻找可能储油岩石（如砂岩、石灰岩）的凹陷地带。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">🛢️</div>
+                        <h3>2. 钻井</h3>
+                        <p>一旦确定了潜在区域，就会钻探探井。现代钻井技术可以钻探数千米深，甚至深入海底。钻头会穿过各种岩层，直达含有石油的储层。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3>3. 采油与分离</h3>
+                        <p>石油通常以液体和天然气的混合形式存在。通过自喷或人工举升技术将石油提取到地面。随后，原油进入炼油厂，通过蒸馏等工艺分离出汽油、柴油、航空煤油、燃料油等不同产品。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">♻️</div>
+                        <h3>4. 环保处理</h3>
+                        <p>现代开采非常重视环境保护。钻井过程中会产生大量的废水、废气，必须经过严格的处理和回收利用，以防止对土壤和地下水造成污染。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications -->
+        <section id="applications" class="applications">
+            <div class="container">
+                <h2 class="section-title">石油的多重应用</h2>
+                <p class="section-subtitle">除了作为燃料，石油还创造了无数工业奇迹。</p>
+                
+                <div class="app-list">
+                    <div class="app-item">
+                        <div class="app-icon">🚗</div>
+                        <span class="app-name">交通运输</span>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-icon">🏭</div>
+                        <span class="app-name">化工原料</span>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-icon">🏠</div>
+                        <span class="app-name">建筑材料</span>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-icon">💊</div>
+                        <span class="app-name">医药用品</span>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-icon">🛣️</div>
+                        <span class="app-name">铺路材料</span>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-icon">👕</div>
+                        <span class="app-name">合成纤维</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h2>4500+</h2>
+                        <p>年形成周期</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>1.5亿</h2>
+                        <p>桶/日全球产量</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>10000+</h2>
+                        <p>石油化工产品</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>90%</h2>
+                        <p>现代交通燃料</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">石油是可再生资源吗？ <span>+</span></div>
+                    <div class="faq-answer">不是。石油属于不可再生资源。它的形成需要数百万年的时间，而人类的消耗速度远远快于其自然生成的速度。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">为什么石油被称为“黑色金子”？ <span>+</span></div>
+                    <div class="faq-answer">这个比喻源于其极高的经济价值、稀缺性以及作为工业血液的重要性。它曾是许多国家财富的象征。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">石油勘探对环境有什么影响？ <span>+</span></div>
+                    <div class="faq-answer">传统的石油开采和运输可能对环境造成污染，包括土壤破坏、水体污染和温室气体排放。因此，现代技术正致力于提高能效和开发清洁能源。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <span>⛽</span> 我发现了石油
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        致力于普及石油地质知识，介绍能源开发技术，提升公众对能源重要性的认识。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">关于石油</a></li>
+                        <li><a href="#process">开采技术</a></li>
+                        <li><a href="#applications">应用领域</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源支持</h4>
+                    <ul>
+                        <li><a href="#">地质百科</a></li>
+                        <li><a href="#">能源政策</a></li>
+                        <li><a href="#">环保指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱：info@oil-discovery.com</li>
+                        <li>电话：400-123-4567</li>
+                        <li>地址：能源科技园区A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 我发现了石油. 保留所有权利. 本站内容仅供科普教育使用.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
