@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="防患于未然课件 - 提供专业的风险管理、安全意识教育及应急处理教学资源，包含课件下载、教学大纲及案例分析，助力企业及学校提升安全防范能力。">
+    <meta name="keywords" content="防患于未然课件, 风险管理课件, 安全教育, 应急处理, 教学资源">
+    <title>防患于未然课件 - 企业与学校风险管理教学资源库</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --text-gray: #666;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .btn-download {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-download:hover {
+            background-color: #1a252f;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Main Content */
+        main {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.7);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .card-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card-desc {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .card-action {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn-text {
+            color: var(--accent-color);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-text:hover {
+            text-decoration: underline;
+        }
+
+        /* Feature Section (Text + Image) */
+        .feature-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: var(--white);
+            padding: 60px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-content p {
+            margin-bottom: 20px;
+            color: var(--text-gray);
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .feature-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .feature-image img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Download Section */
+        .download-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .download-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .download-section p {
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .file-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .file-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px 30px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: background 0.3s;
+        }
+
+        .file-item:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .file-icon {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .file-info {
+            text-align: left;
+        }
+
+        .file-name {
+            font-weight: bold;
+            display: block;
+        }
+
+        .file-size {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .download-btn {
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        .faq-content {
+            padding: 0 20px 20px 20px;
+            color: var(--text-gray);
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .feature-section { flex-direction: column; padding: 30px; }
+            nav { display: none; } /* Simplified for mobile demo */
+            .header-container { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <span>◆</span> 防患于未然
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#download">课件下载</a></li>
+                <li><a href="#features">核心功能</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+        <a href="#download" class="btn-download">立即获取</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>防患于未然课件</h1>
+    <p>构建全方位的风险管理体系与安全意识教育平台，为企业培训、学校教育及社区管理提供专业、实用的教学资源。</p>
+    <div class="hero-buttons">
+        <a href="#download" class="btn-primary">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            下载最新课件
+        </a>
+        <a href="#features" class="btn-outline">了解详情</a>
+    </div>
+</section>
+
+<main>
+    <!-- Introduction Section -->
+    <section id="features">
+        <div class="feature-section">
+            <div class="feature-content">
+                <h3>为什么要重视“防患于未然”？</h3>
+                <p>在现代管理中，风险控制与安全意识是组织持续发展的基石。通过系统的课件培训，可以帮助受众识别潜在隐患，建立应急处理机制，将事故损失降到最低。</p>
+                <ul class="feature-list">
+                    <li><strong>提升安全意识：</strong>从被动应对转变为主动预防。</li>
+                    <li><strong>规范操作流程：</strong>通过案例教学，明确标准作业程序（SOP）。</li>
+                    <li><strong>降低事故成本：</strong>预防成本远低于事后补救的经济与人力损失。</li>
+                </ul>
+            </div>
+            <div class="feature-image">
+                <img src="https://picsum.photos/seed/safety/600/400" alt="安全教育培训示意图">
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <div class="section-header">
+        <h2>课件分类体系</h2>
+        <p>针对不同场景与受众，提供定制化的教学模块</p>
+    </div>
+
+    <section class="grid-3">
+        <article class="card">
+            <div class="card-image">
+                <img src="https://picsum.photos/seed/fire/400/250" alt="消防安全课件">
+                <span class="card-tag">安全应急</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">消防安全与逃生</h3>
+                <p class="card-desc">涵盖火灾成因分析、灭火器使用方法、疏散通道标识识别及紧急逃生技巧，适用于企业及公共场所培训。</p>
+                <div class="card-meta">
+                    <span>时长：45分钟</span>
+                    <span>适用：全员</span>
+                </div>
+                <div class="card-action">
+                    <span class="btn-text">查看详情 →</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image">
+                <img src="https://picsum.photos/seed/it/400/250" alt="网络安全课件">
+                <span class="card-tag">信息科技</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">网络安全与数据防护</h3>
+                <p class="card-desc">深入浅出讲解钓鱼邮件识别、弱口令危害、网络钓鱼防范及个人隐私保护，强化信息安全防线。</p>
+                <div class="card-meta">
+                    <span>时长：60分钟</span>
+                    <span>适用：办公人员</span>
+                </div>
+                <div class="card-action">
+                    <span class="btn-text">查看详情 →</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image">
+                <img src="https://picsum.photos/seed/mental/400/250" alt="心理健康课件">
+                <span class="card-tag">职业健康</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">职场压力管理与心理建设</h3>
+                <p class="card-desc">关注员工心理健康，提供情绪调节、压力疏导及职场沟通技巧培训，预防因心理问题导致的安全隐患。</p>
+                <div class="card-meta">
+                    <span>时长：50分钟</span>
+                    <span>适用：管理层</span>
+                </div>
+                <div class="card-action">
+                    <span class="btn-text">查看详情 →</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <h3>精选课件资源下载</h3>
+        <p>支持 PPT 演示文稿、PDF 电子书及教学视频，方便线下授课与自学。</p>
+        <div class="file-list">
+            <div class="file-item">
+                <div class="file-icon">📄</div>
+                <div class="file-info">
+                    <span class="file-name">企业安全管理全套课件.pptx</span>
+                    <span class="file-size">24.5 MB</span>
+                </div>
+                <a href="#" class="download-btn">下载</a>
+            </div>
+            <div class="file-item">
+                <div class="file-icon">📖</div>
+                <div class="file-info">
+                    <span class="file-name">应急预案编制指南.pdf</span>
+                    <span class="file-size">12.1 MB</span>
+                </div>
+                <a href="#" class="download-btn">下载</a>
+            </div>
+            <div class="file-item">
+                <div class="file-icon">🎬</div>
+                <div class="file-info">
+                    <span class="file-name">隐患排查标准教学视频.mp4</span>
+                    <span class="file-size">156 MB</span>
+                </div>
+                <a href="#" class="download-btn">下载</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-header">
+        <h2>常见问题解答</h2>
+    </section>
+    <div class="faq-container">
+        <details>
+            <summary>这些课件适合哪些人群使用？</summary>
+            <div class="faq-content">
+                我们的课件设计具有通用性，既适用于企业员工的安全入职培训，也适合学校开展安全教育课程，同时可针对社区管理进行风险防范教育。
+            </div>
+        </details>
+        <details>
+            <summary>课件内容是否可以修改？</summary>
+            <div class="faq-content">
+                是的，所有下载的课件均采用通用格式（PPT/PDF），您可以根据自身的行业特点、企业文化和具体需求进行内容的调整和二次编辑。
+            </div>
+        </details>
+        <details>
+            <summary>如何获取更新后的教学资源？</summary>
+            <div class="faq-content">
+                建议定期关注本站下载专区，我们会根据最新的法律法规、行业标准及安全事件案例，定期更新课件内容，确保教学内容的时效性。
+            </div>
+        </details>
+        <details>
+            <summary>下载是否需要付费或注册？</summary>
+            <div class="faq-content">
+                基础的课件资源目前提供免费下载，部分深度视频教程或定制化服务可能需要联系客服了解详情。
+            </div>
+        </details>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>防患于未然</h4>
+            <p>致力于提供最专业的风险管理教学资源，让安全意识深入人心。</p>
+        </div>
+        <div class="footer-col">
+            <h4>快速链接</h4>
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">资源中心</a></li>
+                <li><a href="#">版权声明</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>热门分类</h4>
+            <ul>
+                <li><a href="#">消防安全</a></li>
+                <li><a href="#">信息安全</a></li>
+                <li><a href="#">生产安全</a></li>
+                <li><a href="#">医疗急救</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 防患于未然课件平台. 保留所有权利.</p>
+    </div>
+</footer>
+
+</body>
+          </html>
