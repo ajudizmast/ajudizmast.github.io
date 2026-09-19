@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵砂-原神角色图鉴与养成攻略</title>
+    <meta name="description" content="灵砂角色图鉴，包含角色背景故事、技能机制解析、圣遗物推荐、武器搭配及养成资源获取指南。">
+    <meta name="keywords" content="灵砂, 原神, 灵砂攻略, 原神角色, 原神圣遗物">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d6a35a;
+            --secondary-color: #2a2a2a;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --accent-red: #b73e3e;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(214, 163, 90, 0.1) 0%, transparent 60%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #c4934a;
+            transform: translateY(-2px);
+        }
+
+        /* Character Profile Section */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+
+        .profile-info h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .profile-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .tag {
+            background-color: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .profile-desc {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .stats-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stats-table td:first-child {
+            font-weight: bold;
+            width: 120px;
+        }
+
+        /* Abilities Section */
+        .abilities-section {
+            background-color: var(--card-bg);
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .ability-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .ability-card {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            transition: box-shadow 0.3s;
+        }
+
+        .ability-card:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .ability-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .ability-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .ability-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Build & Artifacts Section */
+        .build-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .build-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .build-header {
+            background-color: #f9f9f9;
+            padding: 15px;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+        }
+
+        .build-content {
+            padding: 20px;
+        }
+
+        .build-list {
+            list-style: none;
+        }
+
+        .build-list li {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .build-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .weapon-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        /* Guide List */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 60px;
+        }
+
+        .guide-item {
+            display: flex;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+
+        .guide-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .guide-text h3 {
+            margin-bottom: 5px;
+        }
+
+        .guide-text p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--card-bg);
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--text-light);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .build-section {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span style="font-size: 28px;">⚗️</span> 灵砂图鉴
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">角色主页</a></li>
+                    <li><a href="#abilities">技能机制</a></li>
+                    <li><a href="#builds">养成指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>灵砂</h1>
+                <p>「此身即是炼砂之炉，以火为引，重塑万物。」</p>
+                <a href="#builds" class="btn">开始养成</a>
+            </div>
+        </section>
+
+        <!-- Character Profile -->
+        <section class="container">
+            <h2 class="section-title">角色档案</h2>
+            <div class="profile-grid">
+                <img src="https://picsum.photos/seed/lingsha/600/800" alt="灵砂角色立绘" class="profile-img">
+                <div class="profile-info">
+                    <h2>灵砂</h2>
+                    <div class="profile-meta">
+                        <span class="tag">岩属性</span>
+                        <span class="tag">单手剑</span>
+                        <span class="tag">辅助 / 治疗</span>
+                        <span class="tag">5星</span>
+                    </div>
+                    <div class="profile-desc">
+                        灵砂是璃月地区的一位神秘炼金术士，据说她掌握着古老的砂之秘术。她性格冷静理智，平时独居于荒漠中的炼金工坊，但为了探寻砂之真谛，经常接受委托前往各地解决危机。她手中的单手剑并非兵器，而是一把巨大的炼砂坩埚，能够将周围的元素能量转化为治愈与护盾。
+                    </div>
+                    
+                    <table class="stats-table">
+                        <tr>
+                            <td>生命值上限</td>
+                            <td>2,458</td>
+                        </tr>
+                        <tr>
+                            <td>元素充能效率</td>
+                            <td>143.4%</td>
+                        </tr>
+                        <tr>
+                            <td>元素爆发伤害</td>
+                            <td>2,012</td>
+                        </tr>
+                        <tr>
+                            <td>治疗加成</td>
+                            <td>最大生命值百分比</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abilities -->
+        <section id="abilities" class="abilities-section">
+            <div class="container">
+                <h2 class="section-title">技能机制</h2>
+                <div class="ability-cards">
+                    <div class="ability-card">
+                        <span class="ability-icon">⚔️</span>
+                        <h3>普通攻击 · 炼砂一击</h3>
+                        <p>使用炼砂坩埚进行最多五段的攻击，造成岩元素伤害。最后一段攻击会产生微小的砂尘爆炸。</p>
+                    </div>
+                    <div class="ability-card">
+                        <span class="ability-icon">🛡️</span>
+                        <h3>元素战技 · 灼烧之护</h3>
+                        <p>在身前展开一个由高温砂砾构成的护盾，护盾存在期间，灵砂每秒回复自身生命值，并对周围敌人造成持续岩元素伤害。护盾破碎时会爆炸。</p>
+                    </div>
+                    <div class="ability-card">
+                        <span class="ability-icon">🔥</span>
+                        <h3>元素爆发 · 熔炉重铸</h3>
+                        <p>引动地脉之火，在指定区域生成一座炼砂熔炉。处于熔炉范围内的队友将获得持续的生命值恢复和攻击力提升，并每秒受到岩元素伤害。</p>
+                    </div>
+                    <div class="ability-card">
+                        <span class="ability-icon">✨</span>
+                        <h3>固有天赋</h3>
+                        <p>「砂之回响」：灵砂受到的治疗效果提升15%。当灵砂治疗队友时，会为队友施加「砂之庇佑」，提升其防御力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Build & Artifacts -->
+        <section id="builds" class="container">
+            <h2 class="section-title">养成指南</h2>
+            <div class="build-section">
+                <!-- Weapon -->
+                <div class="build-card">
+                    <div class="build-header">推荐武器</div>
+                    <div class="build-content">
+                        <ul class="build-list">
+                            <li><span class="weapon-icon">🗡️</span> <strong>磐岩结绿</strong><br>暴击率提升，普通攻击造成额外伤害。</li>
+                            <li><span class="weapon-icon">🗡️</span> <strong>若水</strong><br>生命值转化为攻击力，提升治疗量。</li>
+                            <li><span class="weapon-icon">🗡️</span> <strong>护摩之杖</strong><br>生命值提升攻击力，适合高频治疗。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Artifact Set -->
+                <div class="build-card">
+                    <div class="build-header">推荐圣遗物</div>
+                    <div class="build-content">
+                        <ul class="build-list">
+                            <li><strong>套装：</strong>2件套 <em>「千岩牢固」</em> + 2件套 <em>「生命之花」</em></li>
+                            <li><strong>主词条：</strong>沙漏（生命%）、杯子（生命%）、头冠（治疗加成）</li>
+                            <li><strong>副词条：</strong>优先选择生命值百分比，其次是充能效率。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Team -->
+                <div class="build-card">
+                    <div class="build-header">推荐队伍</div>
+                    <div class="build-content">
+                        <ul class="build-list">
+                            <li><strong>双岩队：</strong>钟离 + 灵砂 + 雷电将军 + 钟离</li>
+                            <li><strong>护盾流：</strong>枫原万叶 + 灵砂 + 草元素角色 + 班尼特</li>
+                            <li><strong>高频治疗：</strong>夜兰 + 灵砂 + 闲云 + 班尼特</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guide List -->
+            <h2 class="section-title">资源获取</h2>
+            <div class="guide-list">
+                <div class="guide-item">
+                    <div class="guide-icon">💎</div>
+                    <div class="guide-text">
+                        <h3>灵砂命座</h3>
+                        <p>命座1提升元素战技的护盾强度；命座6大幅增加元素爆发的治疗范围。建议优先抽取命座1和6。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">📜</div>
+                    <div class="guide-text">
+                        <h3>突破材料</h3>
+                        <p>需要「海乱鬼·正狂」掉落的「黄玉碎屑」、「黑曜石」，以及位于璃月地区的「砂金花」。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">📖</div>
+                    <div class="guide-text">
+                        <h3>技能升级材料</h3>
+                        <p>升级技能主要消耗「史莱姆凝液」和「导能之光」等低级材料，建议在活动期间集中资源。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">常见问题</h2>
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <div class="faq-question">灵砂适合新手玩家吗？ <span>▼</span></div>
+                        <div class="faq-answer">是的，灵砂作为治疗辅助角色，操作门槛较低，能够提供护盾和持续治疗，非常适合新手玩家组建队伍。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">灵砂需要堆叠暴击率吗？ <span>▼</span></div>
+                        <div class="faq-answer">不需要。灵砂的核心机制基于生命值和充能效率，暴击属性对她的提升微乎其微，应优先保证生命值和充能。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">灵砂和心海哪个更好？ <span>▼</span></div>
+                        <div class="faq-answer">灵砂拥有护盾机制，生存能力更强；心海则拥有更纯粹的大范围群体治疗。根据队伍配置选择即可，两者都是顶级治疗。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系投稿</a>
+                <a href="#">隐私政策</a>
+            </div>
+            <p>&copy; 2024 灵砂图鉴. All rights reserved. 本站为玩家自建攻略站，非米哈游官方网站。</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                
+                // Rotate arrow
+                const arrow = item.querySelector('span');
+                arrow.textContent = parent.classList.contains('active') ? '▲' : '▼';
+            });
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
