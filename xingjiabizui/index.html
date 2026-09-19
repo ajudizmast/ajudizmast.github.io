@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="性价比最好的二手车选购指南，提供品牌推荐、避坑技巧、价格分析及靠谱车源平台对比，帮助您以最优价格买到高性价比二手车。">
+    <meta name="keywords" content="性价比最好的二手车,二手车选购,二手车推荐,二手车避坑,二手车平台">
+    <title>性价比最好的二手车-专业选购指南与避坑攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-hover: #004494;
+            --secondary-color: #f8f9fa;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --accent-green: #28a745;
+            --accent-orange: #fd7e14;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-box {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: inline-flex;
+            gap: 0.5rem;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            background-color: var(--accent-orange);
+            color: #fff;
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Content Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.6rem;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Car List */
+        .car-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .car-card {
+            display: flex;
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+        }
+
+        .car-image {
+            width: 280px;
+            height: 180px;
+            object-fit: cover;
+            background-color: #eee;
+            flex-shrink: 0;
+        }
+
+        .car-info {
+            padding: 1.25rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .car-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .car-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .tag.high-quality {
+            background-color: #e6f9ed;
+            color: var(--accent-green);
+        }
+
+        .tag.safe {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .car-details {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .detail-item strong {
+            display: block;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .car-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 0.75rem;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            color: var(--accent-orange);
+            font-weight: 700;
+        }
+
+        .price span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .checklist-item input {
+            margin-right: 0.5rem;
+            margin-top: 0.2rem;
+        }
+
+        .checklist-item label {
+            color: var(--text-secondary);
+        }
+
+        .checklist-item strong {
+            color: var(--text-main);
+        }
+
+        /* Pricing Table */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .pricing-table th, .pricing-table td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .pricing-table th {
+            background-color: #f1f3f5;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .rating {
+            color: #ffc107;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .faq-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Utility */
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .badge-new { background: #007bff; color: white; }
+        .badge-hot { background: #dc3545; color: white; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M12 18v-6"></path><path d="M9 15h6"></path></svg>
+                二手车优选
+            </div>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">品牌车系</a>
+                <a href="#">价格分析</a>
+                <a href="#">避坑指南</a>
+                <a href="#">评测报告</a>
+            </nav>
+            <a href="#" class="cta-btn">免费验车预约</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>寻找性价比最好的二手车</h1>
+                <p>专业解析市场行情，为您筛选高保值、低故障率的优质车源。从入门代步到家用轿车，助您轻松避坑，用最合理的预算买到心仪座驾。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="输入车型，如：丰田卡罗拉、本田思域...">
+                    <button>搜索车源</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container content-grid">
+            <!-- Main Content -->
+            <div class="main-content">
+                
+                <!-- High Value Section -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">高保值率车型推荐</h2>
+                        <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">查看完整榜单 &rarr;</a>
+                    </div>
+                    <div class="car-list">
+                        <!-- Car Item 1 -->
+                        <article class="car-card">
+                            <img src="https://picsum.photos/seed/car1/280/180" alt="丰田卡罗拉" class="car-image">
+                            <div class="car-info">
+                                <div>
+                                    <h3 class="car-title">2020款 丰田卡罗拉 双擎</h3>
+                                    <div class="car-tags">
+                                        <span class="tag high-quality">保值率高</span>
+                                        <span class="tag safe">故障率低</span>
+                                        <span class="tag">省油</span>
+                                    </div>
+                                    <div class="car-details">
+                                        <div class="detail-item"><strong>行驶里程</strong>3.5万公里</div>
+                                        <div class="detail-item"><strong>上牌时间</strong>2020年5月</div>
+                                        <div class="detail-item"><strong>排量</strong>1.8L 混动</div>
+                                        <div class="detail-item"><strong>车况</strong>准新车</div>
+                                    </div>
+                                </div>
+                                <div class="car-footer">
+                                    <div class="price">¥12.8<span>万起</span></div>
+                                    <a href="#" class="btn-outline">查看详情</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Car Item 2 -->
+                        <article class="car-card">
+                            <img src="https://picsum.photos/seed/car2/280/180" alt="本田思域" class="car-image">
+                            <div class="car-info">
+                                <div>
+                                    <h3 class="car-title">2019款 本田思域 220TURBO</h3>
+                                    <div class="car-tags">
+                                        <span class="tag high-quality">动力强劲</span>
+                                        <span class="tag safe">维修便宜</span>
+                                        <span class="tag">运动风</span>
+                                    </div>
+                                    <div class="car-details">
+                                        <div class="detail-item"><strong>行驶里程</strong>4.2万公里</div>
+                                        <div class="detail-item"><strong>上牌时间</strong>2019年8月</div>
+                                        <div class="detail-item"><strong>排量</strong>1.5T</div>
+                                        <div class="detail-item"><strong>车况</strong>精品</div>
+                                    </div>
+                                </div>
+                                <div class="car-footer">
+                                    <div class="price">¥9.5<span>万起</span></div>
+                                    <a href="#" class="btn-outline">查看详情</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Car Item 3 -->
+                        <article class="car-card">
+                            <img src="https://picsum.photos/seed/car3/280/180" alt="大众朗逸" class="car-image">
+                            <div class="car-info">
+                                <div>
+                                    <h3 class="car-title">2021款 大众朗逸 300TSI</h3>
+                                    <div class="car-tags">
+                                        <span class="tag high-quality">皮实耐造</span>
+                                        <span class="tag safe">保有量大</span>
+                                        <span class="tag">家用首选</span>
+                                    </div>
+                                    <div class="car-details">
+                                        <div class="detail-item"><strong>行驶里程</strong>2.1万公里</div>
+                                        <div class="detail-item"><strong>上牌时间</strong>2021年3月</div>
+                                        <div class="detail-item"><strong>排量</strong>1.4T</div>
+                                        <div class="detail-item"><strong>车况</strong>车况良好</div>
+                                    </div>
+                                </div>
+                                <div class="car-footer">
+                                    <div class="price">¥11.2<span>万起</span></div>
+                                    <a href="#" class="btn-outline">查看详情</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Price Analysis Section -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">性价比价格区间分析</h2>
+                    </div>
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>车型级别</th>
+                                <th>推荐车系</th>
+                                <th>当前市场均价</th>
+                                <th>性价比评分</th>
+                                <th>适合人群</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>入门代步</strong></td>
+                                <td>丰田威驰、本田飞度</td>
+                                <td>5.5万 - 7.5万</td>
+                                <td><span class="rating">★★★★★</span></td>
+                                <td>新手练手、预算有限</td>
+                            </tr>
+                            <tr>
+                                <td><strong>紧凑型家轿</strong></td>
+                                <td>大众朗逸、日产轩逸</td>
+                                <td>8.0万 - 11.0万</td>
+                                <td><span class="rating">★★★★☆</span></td>
+                                <td>家庭第一辆车</td>
+                            </tr>
+                            <tr>
+                                <td><strong>合资SUV</strong></td>
+                                <td>本田XR-V、丰田RAV4</td>
+                                <td>12.0万 - 16.0万</td>
+                                <td><span class="rating">★★★★☆</span></td>
+                                <td>追求空间与通过性</td>
+                            </tr>
+                            <tr>
+                                <td><strong>豪华入门</strong></td>
+                                <td>奥迪A4L、宝马3系</td>
+                                <td>18.0万 - 22.0万</td>
+                                <td><span class="rating">★★★☆☆</span></td>
+                                <td>高阶用户、商务需求</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- FAQ Section -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">常见问题解答</h2>
+                    </div>
+                    <div class="faq-item">
+                        <h4>如何判断一辆车的性价比是否真的高？</h4>
+                        <p>性价比不仅看购买价格，更要考虑后续的燃油经济性、保养成本以及二手车残值。建议优先选择市场保有量大、配件便宜且技术成熟稳定的车型。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>购买性价比二手车有哪些避坑技巧？</h4>
+                        <p>建议在购买前使用第三方检测平台进行车辆检测，重点关注发动机舱是否有事故痕迹、泡水记录以及调表情况。不要轻信“准新车”的低价宣传。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>哪些年份的二手车性价比最高？</h4>
+                        <p>通常行驶里程在3-5万公里左右、车龄在3-5年左右的二手车性价比最高。这个阶段车辆通常已经过一次保养，且价格相对新车有大幅优惠。</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>验车检查清单</h3>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="c1">
+                        <label for="c1"><strong>检查发动机舱</strong><br>看是否有漏油、生锈或改装痕迹。</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="c2">
+                        <label for="c2"><strong>测试试驾</strong><br>检查换挡是否平顺，有无异响。</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="c3">
+                        <label for="c3"><strong>查看维修记录</strong><br>确认是否有重大事故理赔记录。</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="c4">
+                        <label for="c4"><strong>检查内饰磨损</strong><br>判断车辆实际使用频率和车况。</label>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>热门车型排行榜</h3>
+                    <ul style="font-size: 0.9rem; color: var(--text-secondary);">
+                        <li style="display:flex; justify-content:space-between; margin-bottom:0.5rem; padding-bottom:0.5rem; border-bottom:1px dashed #ddd;">
+                            <span>1. 丰田卡罗拉</span> <span class="badge badge-hot">热</span>
+                        </li>
+                        <li style="display:flex; justify-content:space-between; margin-bottom:0.5rem; padding-bottom:0.5rem; border-bottom:1px dashed #ddd;">
+                            <span>2. 本田思域</span> <span class="badge badge-hot">热</span>
+                        </li>
+                        <li style="display:flex; justify-content:space-between; margin-bottom:0.5rem; padding-bottom:0.5rem; border-bottom:1px dashed #ddd;">
+                            <span>3. 大众朗逸</span>
+                        </li>
+                        <li style="display:flex; justify-content:space-between; margin-bottom:0.5rem; padding-bottom:0.5rem; border-bottom:1px dashed #ddd;">
+                            <span>4. 日产轩逸</span>
+                        </li>
+                        <li style="display:flex; justify-content:space-between; margin-bottom:0.5rem; padding-bottom:0.5rem; border-bottom:1px dashed #ddd;">
+                            <span>5. 本田XR-V</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget" style="background-color: var(--primary-color); color: white;">
+                    <h3 style="border-bottom: 1px solid rgba(255,255,255,0.2);">获取专业报价</h3>
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem; opacity: 0.9;">输入您的车牌号或车型，免费获取当前市场真实行情价。</p>
+                    <input type="text" placeholder="输入车型或车牌" style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border-radius: 4px; border: none;">
+                    <button style="width: 100%; padding: 0.5rem; background: var(--accent-orange); border: none; color: white; font-weight: bold; border-radius: 4px; cursor: pointer;">立即查询</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        专注二手车行业十年，致力于为用户提供客观、透明的市场信息与选购建议，帮助每一位车主找到性价比最好的二手车。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>选购指南</h4>
+                    <ul>
+                        <li><a href="#">品牌推荐</a></li>
+                        <li><a href="#">价格分析</a></li>
+                        <li><a href="#">验车教程</a></li>
+                        <li><a href="#">保险攻略</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 二手车优选指南网 版权所有. 本站内容仅供参考，不构成购买建议.
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
