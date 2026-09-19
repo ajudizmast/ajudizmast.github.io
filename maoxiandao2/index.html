@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冒险岛2狂战士技能加点攻略，包含狂战士加点流派推荐、技能连招技巧、装备选择建议以及新手入门指南。提供详细的属性分配与技能升级优先级分析。">
+    <meta name="keywords" content="冒险岛2狂战士技能加点, 冒险岛2狂战士加点, 冒险岛2职业攻略, 冒险岛2技能搭配">
+    <title>冒险岛2狂战士技能加点-职业进阶与加点流派深度解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --secondary-color: #FFD700;
+            --bg-color: #1a1a1a;
+            --card-bg: #2a2a2a;
+            --text-color: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-green: #4CAF50;
+            --accent-blue: #2196F3;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: 2px solid var(--primary-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4a0000 0%, #1a0000 100%);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 215, 0, 0.1);
+            color: var(--secondary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Content Section */
+        .content-section {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #444;
+            margin-left: 15px;
+        }
+
+        .text-block {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .text-block h3 {
+            color: #fff;
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .text-block ul, .text-block ol {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .text-block li {
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+
+        /* Skill Tree Visualization */
+        .skill-tree-container {
+            background: #222;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid #444;
+        }
+
+        .skill-node {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #333;
+            border-radius: 4px;
+            border-left: 4px solid var(--secondary-color);
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .skill-node:hover {
+            background: #3d3d3d;
+            transform: translateX(5px);
+        }
+
+        .skill-node.active {
+            background: #3d1a1a;
+            border-left-color: #ff4d4d;
+        }
+
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            background: #555;
+            border-radius: 4px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+
+        .skill-info h4 {
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .skill-info span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+        }
+
+        .stat-bar {
+            margin-bottom: 15px;
+        }
+
+        .stat-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+
+        .progress-bg {
+            height: 8px;
+            background: #444;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .build-card {
+            background: #252525;
+            border: 1px solid #444;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .build-card h4 {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .build-card p {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #a00000;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #444;
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: #bbb;
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .faq-item.open .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 40px 0;
+            margin-top: 50px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #888;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/>
+            </svg>
+            <span>冒险岛2攻略组</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">加点攻略</a></li>
+                <li><a href="#">装备推荐</a></li>
+                <li><a href="#">副本指南</a></li>
+                <li><a href="#">新手问答</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="container">
+        <h1>狂战士加点指南</h1>
+        <p>掌握核心技能树与属性分配，打造最强近战输出核心。</p>
+        <div class="hero-tags">
+            <span class="tag">狂暴流</span>
+            <span class="tag">生存流</span>
+            <span class="tag">PVP加点</span>
+            <span class="tag">装备搭配</span>
+        </div>
+    </div>
+</div>
+
+<main class="container">
+    <div class="main-layout">
+        <!-- Left Content -->
+        <section class="content-area">
+            
+            <!-- Intro -->
+            <article class="content-section">
+                <h2 class="section-title">职业定位与加点核心思路</h2>
+                <div class="text-block">
+                    <p>狂战士在《冒险岛2》中是典型的单体爆发型近战职业，拥有极高的攻击速度和物理伤害潜力。在加点时，首要目标是最大化<span style="color:var(--secondary-color)">攻击力</span>、<span style="color:var(--secondary-color)">暴击率</span>以及<span style="color:var(--secondary-color)">技能伤害倍率</span>。由于狂战士的血量相对较高，但在面对高频率伤害时仍需注意生存属性，因此根据副本环境选择“输出流”或“生存流”是关键。</p>
+                </div>
+            </article>
+
+            <!-- Core Skills -->
+            <article class="content-section">
+                <h2 class="section-title">核心技能加点详解</h2>
+                <div class="text-block">
+                    <h3>1. 必满核心技能（PVE）</h3>
+                    <ul>
+                        <li><strong>狂暴之血：</strong> 提升攻击力和暴击率的核心被动，必须加满。</li>
+                        <li><strong>旋风斩：</strong> 优秀的AOE技能，清理小怪必备，建议优先升级。</li>
+                        <li><strong>死亡之握：</strong> 狂战士的灵魂技能，提供霸体和强力爆发，PVE副本中伤害占比极高。</li>
+                        <li><strong>战神之怒：</strong> 大幅提升物理攻击力的Buff，循环技能，全程保持。</li>
+                    </ul>
+
+                    <h3>2. 辅助与生存技能</h3>
+                    <ul>
+                        <li><strong>生命汲取：</strong> 在单体输出时提供续航能力，推荐点满。</li>
+                        <li><strong>铁壁：</strong> 在PVP或高难度BOSS战中能提供关键的控制免疫，建议至少点出2级。</li>
+                        <li><strong>复仇之怒：</strong> 受到伤害时提升攻击力，适合挑战高难度副本。</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Skill Tree Visualization -->
+            <article class="content-section">
+                <h2 class="section-title">推荐加点流派展示</h2>
+                <div class="skill-tree-container">
+                    <div class="skill-node active" onclick="toggleSkill(this)">
+                        <div class="skill-icon">1</div>
+                        <div class="skill-info">
+                            <h4>死亡之握 (Lv.30)</h4>
+                            <span>核心爆发 | 霸体</span>
+                        </div>
+                    </div>
+                    <div class="skill-node" onclick="toggleSkill(this)">
+                        <div class="skill-icon">2</div>
+                        <div class="skill-info">
+                            <h4>旋风斩 (Lv.20)</h4>
+                            <span>群体清怪 | 高频</span>
+                        </div>
+                    </div>
+                    <div class="skill-node" onclick="toggleSkill(this)">
+                        <div class="skill-icon">3</div>
+                        <div class="skill-info">
+                            <h4>战神之怒 (Lv.25)</h4>
+                            <span>攻击力Buff | 循环</span>
+                        </div>
+                    </div>
+                    <div class="skill-node" onclick="toggleSkill(this)">
+                        <div class="skill-icon">4</div>
+                        <div class="skill-info">
+                            <h4>狂暴之血 (Lv.30)</h4>
+                            <span>被动增伤 | 必点</span>
+                        </div>
+                    </div>
+                    <div class="skill-node" onclick="toggleSkill(this)">
+                        <div class="skill-icon">5</div>
+                        <div class="skill-info">
+                            <h4>生命汲取 (Lv.10)</h4>
+                            <span>续航 | 单体</span>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top:15px; font-size:0.9rem; color:#888;">* 点击节点查看详细技能说明与冷却时间</p>
+            </article>
+
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside>
+            <!-- Build Comparison -->
+            <div class="sidebar-card">
+                <h3 class="section-title" style="margin-bottom:15px; font-size:1.1rem;">流派对比</h3>
+                
+                <div class="build-card">
+                    <h4>输出流 (推荐)</h4>
+                    <p>全力堆砌攻击力与暴击，牺牲少量防御。</p>
+                    <div class="stat-bar">
+                        <div class="stat-label"><span>暴击率</span><span>85%+</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-label"><span>物理攻击</span><span>MAX</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 95%;"></div></div>
+                    </div>
+                </div>
+
+                <div class="build-card">
+                    <h4>生存流 (PVP)</h4>
+                    <p>增加生命值与控制抗性，提高容错率。</p>
+                    <div class="stat-bar">
+                        <div class="stat-label"><span>生命值</span><span>+25%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-label"><span>防御力</span><span>MAX</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 70%;"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attribute Priority -->
+            <div class="sidebar-card">
+                <h3 class="section-title" style="margin-bottom:15px; font-size:1.1rem;">属性优先级</h3>
+                <ol style="padding-left: 20px; font-size: 0.9rem; color: #ccc;">
+                    <li style="margin-bottom:8px;">物理攻击力 (P.Atk)</li>
+                    <li style="margin-bottom:8px;">暴击率</li>
+                    <li style="margin-bottom:8px;">技能伤害倍率</li>
+                    <li style="margin-bottom:8px;">攻击速度</li>
+                    <li style="margin-bottom:8px;">生命值/防御力 (视情况而定)</li>
+                </ol>
+            </div>
+
+            <!-- CTA -->
+            <button class="btn" onclick="alert('感谢阅读！请持续关注我们的更新。')">复制加点配置</button>
+        </aside>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+        <h2 class="section-title">常见问题 (FAQ)</h2>
+        
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">Q: 狂战士前期应该优先点哪个技能？</div>
+            <div class="faq-answer">
+                A: 前期建议优先加满“战神之怒”提供攻击力Buff，以及“旋风斩”用于快速清怪升级。死亡之握建议在达到一定等级后再集中投入SP。
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">Q: PVP中狂战士如何避免被控制？</div>
+            <div class="faq-answer">
+                A: PVP中必须点出“铁壁”技能（至少2级），利用其霸体效果打断对方控制链，配合死亡之握进行爆发输出。
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">Q: 属性点怎么分配最合理？</div>
+            <div class="faq-answer">
+                A: 前期建议全加力量（STR），装备强化后可根据暴击率需求适当调整，但核心依然是力量和智力（部分装备需求）。
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">免责声明</a>
+            <a href="#">联系投稿</a>
+            <a href="#">网站地图</a>
+        </div>
+        <p class="copyright">© 2023 冒险岛2攻略组 - 冒险岛2狂战士技能加点专题站. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Simple interaction for Skill Nodes
+    function toggleSkill(element) {
+        // Remove active class from all nodes
+        document.querySelectorAll('.skill-node').forEach(node => {
+            node.classList.remove('active');
+        });
+        // Add active class to clicked node
+        element.classList.add('active');
+    }
+
+    // Simple interaction for FAQ
+    function toggleFaq(element) {
+        element.classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>
