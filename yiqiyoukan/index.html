@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一起又看流星雨34在线观看，提供《一起又看流星雨》第34集高清免费视频资源、剧情介绍、分集剧情及角色分析。">
+    <meta name="keywords" content="一起又看流星雨34,一起又看流星雨第34集,一起又看流星雨在线观看,一起又看流星雨全集">
+    <title>一起又看流星雨34-高清在线观看与分集剧情详解</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #60a5fa;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/meteor/1600/600') center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+
+        /* Main Content Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                gap: 15px;
+                margin-top: 10px;
+            }
+        }
+
+        /* Episode Player Section */
+        .player-section {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .play-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .play-icon:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .play-icon svg {
+            fill: white;
+            width: 40px;
+            height: 40px;
+            margin-left: 5px;
+        }
+
+        .episode-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .episode-list {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .episode-btn {
+            padding: 8px 16px;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .episode-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .episode-btn:hover:not(.active) {
+            background: #e2e8f0;
+        }
+
+        /* Info Section */
+        .info-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        .meta-tags {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .synopsis {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .synopsis h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .synopsis p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        /* Sidebar */
+        .sidebar-section {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .sidebar-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .character-list {
+            list-style: none;
+        }
+
+        .character-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .character-item:last-child {
+            border-bottom: none;
+        }
+
+        .char-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #e2e8f0;
+        }
+
+        .char-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .char-info span {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* Related Episodes */
+        .related-episodes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .episode-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .episode-card:hover {
+            border-color: var(--primary-color);
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .ep-number {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            margin-bottom: 5px;
+        }
+
+        .ep-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>流星雨</span>在线
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">剧集列表</a></li>
+                    <li><a href="#">角色图鉴</a></li>
+                    <li><a href="#">粉丝社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>一起又看流星雨34</h1>
+            <p>重温经典青春故事，探索楚雨荨与慕容云海的甜蜜与波折，高清在线观看第34集完整内容。</p>
+            <a href="#player" class="btn btn-primary">立即观看第34集</a>
+        </section>
+
+        <div class="content-grid">
+            <!-- Left Column: Player & Details -->
+            <div class="main-content">
+                
+                <!-- Video Player Area -->
+                <section id="player" class="player-section">
+                    <div class="video-placeholder">
+                        <div class="play-icon" onclick="alert('视频播放器接口已就绪，此处为演示占位符。在实际应用中，将嵌入视频播放器代码。')">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="episode-nav">
+                        <button class="btn btn-primary" onclick="alert('跳转至上一集')">上一集</button>
+                        <div class="episode-list">
+                            <button class="episode-btn active">第34集</button>
+                            <button class="episode-btn">第33集</button>
+                            <button class="episode-btn">第35集</button>
+                            <button class="episode-btn">第36集</button>
+                            <button class="episode-btn">第37集</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="alert('跳转至下一集')">下一集</button>
+                    </div>
+                </section>
+
+                <!-- Synopsis -->
+                <article class="info-section">
+                    <h2>第34集 剧情简介</h2>
+                    <div class="meta-tags">
+                        <span class="tag">青春</span>
+                        <span class="tag">爱情</span>
+                        <span class="tag">校园</span>
+                    </div>
+                    
+                    <div class="synopsis">
+                        <h3>本集看点</h3>
+                        <p>本集讲述了楚雨荨在经历了一系列误会与挑战后，与慕容云海的感情逐渐升温。然而，外部环境的压力和第三方的介入让两人的关系面临新的考验。在学校的文艺汇演筹备过程中，雨荨为了支持云海的梦想，付出了巨大的努力，但也因此忽略了身边的朋友。慕容云海在雨荨的鼓励下，重新找回了自信，两人在星光下的承诺成为了这一集最动人的瞬间。</p>
+                        <p>同时，上官瑞谦对雨荨的执着也引发了新的冲突，林晓鹿的加入让剧情更加扑朔迷离。本集不仅展现了主角团的高光时刻，也深刻探讨了友情、梦想与爱情的边界。</p>
+                    </div>
+
+                    <div class="synopsis">
+                        <h3>分集剧情详情</h3>
+                        <p>1. 慕容云海因为家族企业的危机，心情低落，楚雨荨试图用她特有的乐观精神感染他。</p>
+                        <p>2. 学校即将举办年度晚会，雨荨主动请缨担任后勤总管，却意外发现了云海隐藏的才华。</p>
+                        <p>3. 上官瑞谦试图利用这次晚会的机会，向雨荨展示他的价值，引发慕容云海的强烈竞争意识。</p>
+                        <p>4. 晚会彩排时发生意外，云海挺身而出保护雨荨，两人的手在混乱中紧紧相握。</p>
+                        <p>5. 结尾处，云海在无人的天台向雨荨表白，虽然言语笨拙，但心意真挚。</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <!-- Character Info -->
+                <div class="sidebar-section">
+                    <h3>📺 本集登场角色</h3>
+                    <ul class="character-list">
+                        <li class="character-item">
+                            <img src="https://picsum.photos/seed/yuxin/100/100" alt="楚雨荨" class="char-avatar">
+                            <div class="char-info">
+                                <h4>楚雨荨</h4>
+                                <span>女主角 / 独立坚强</span>
+                            </div>
+                        </li>
+                        <li class="character-item">
+                            <img src="https://picsum.photos/seed/yunhai/100/100" alt="慕容云海" class="char-avatar">
+                            <div class="char-info">
+                                <h4>慕容云海</h4>
+                                <span>男主角 / 富家少爷</span>
+                            </div>
+                        </li>
+                        <li class="character-item">
+                            <img src="https://picsum.photos/seed/august/100/100" alt="上官瑞谦" class="char-avatar">
+                            <div class="char-info">
+                                <h4>上官瑞谦</h4>
+                                <span>男配角 / 竞争对手</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Related Episodes -->
+                <div class="sidebar-section">
+                    <h3>🔄 推荐观看</h3>
+                    <div class="related-episodes">
+                        <div class="episode-card">
+                            <div class="ep-number">第30集</div>
+                            <div class="ep-title">初遇风波</div>
+                        </div>
+                        <div class="episode-card">
+                            <div class="ep-number">第31集</div>
+                            <div class="ep-title">误会加深</div>
+                        </div>
+                        <div class="episode-card">
+                            <div class="ep-number">第32集</div>
+                            <div class="ep-title">雨中告白</div>
+                        </div>
+                        <div class="episode-card">
+                            <div class="ep-number">第33集</div>
+                            <div class="ep-title">守护誓言</div>
+                        </div>
+                        <div class="episode-card">
+                            <div class="ep-number">第35集</div>
+                            <div class="ep-title">危机降临</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于流星雨</h4>
+                    <p>致力于为用户提供最优质的国产青春偶像剧观看体验，汇集经典与热门剧集。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">剧集大全</a></li>
+                        <li><a href="#">演员表</a></li>
+                        <li><a href="#">幕后花絮</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 流星雨在线观看平台. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
