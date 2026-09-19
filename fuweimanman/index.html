@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腐味满满 - 深度解析与情感共鸣指南</title>
+    <meta name="description" content="腐味满满：探索BL（Boys' Love）文化、耽美小说推荐、影视作品深度解析及情感心理分析。提供最纯粹的腐向内容与社群交流指南。">
+    <meta name="keywords" content="腐味满满, BL, 耽美, BL小说, 耽美影视, 情感共鸣, 同人文化">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --secondary-color: #9c27b0;
+            --accent-color: #ff4081;
+            --bg-color: #fdf6f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 12px;
+            --spacing-unit: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--text-main);
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Featured Grid */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Categories */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-item {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .category-item:hover {
+            background: #fff0f5;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .category-name {
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        /* Analysis Section */
+        .analysis-container {
+            display: flex;
+            gap: 40px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .analysis-content {
+            flex: 2;
+        }
+
+        .analysis-sidebar {
+            flex: 1;
+            background: #fce4ec;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .analysis-sidebar h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: #fff;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--card-bg);
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .analysis-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>腐味满满</span> (Full of Y)
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#featured">热门作品</a></li>
+                    <li><a href="#categories">分类大全</a></li>
+                    <li><a href="#analysis">深度解析</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>探索纯粹的情感世界</h1>
+                <p>“腐味满满”不仅是标签，更是一种对纯粹、禁忌与深情共鸣的极致追求。在这里，我们解读BL文化，推荐优质作品，探讨情感心理。</p>
+                <a href="#featured" class="cta-btn">开始探索</a>
+            </div>
+        </section>
+
+        <section class="container" id="categories">
+            <div class="section-header">
+                <h2 class="section-title">腐味分类</h2>
+                <span class="section-subtitle">从古早到现代，从现实到架空</span>
+            </div>
+            <div class="category-grid">
+                <div class="category-item">
+                    <span class="category-icon">🎬</span>
+                    <div class="category-name">耽美影视</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">📖</span>
+                    <div class="category-name">BL小说</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">🎨</span>
+                    <div class="category-name">同人画作</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">🎵</span>
+                    <div class="category-name">广播剧</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="featured">
+            <div class="section-header">
+                <h2 class="section-title">当季热门推荐</h2>
+                <a href="#" class="read-more">查看全部 →</a>
+            </div>
+            <div class="featured-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/love1/400/250" alt="影视封面">
+                        <span class="tag">影视</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">破茧：破晓之时</h3>
+                        <p class="card-desc">讲述两位性格迥异的天才在竞技场上相遇，从互相看不顺眼到灵魂共鸣的励志故事，情感张力十足。</p>
+                        <div class="card-meta">
+                            <span>更新至第12集</span>
+                            <a href="#" class="read-more">阅读详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/love2/400/250" alt="小说封面">
+                        <span class="tag">小说</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">雨夜微醺</h3>
+                        <p class="card-desc">都市情感向作品，描写两个成年人在一次意外的雨夜邂逅后，如何在现实的压力下寻找彼此的温暖。</p>
+                        <div class="card-meta">
+                            <span>已完结</span>
+                            <a href="#" class="read-more">阅读详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/love3/400/250" alt="广播剧封面">
+                        <span class="tag">广播剧</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">偏执先生的温柔</h3>
+                        <p class="card-desc">高冷霸总与腹黑律师的极限拉扯，声音演绎细腻入微，台词金句频出，绝对是“腐味满满”的代表作。</p>
+                        <div class="card-meta">
+                            <span>好评如潮</span>
+                            <a href="#" class="read-more">收听详情</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container" id="analysis">
+            <div class="section-header">
+                <h2 class="section-title">深度解析</h2>
+                <span class="section-subtitle">为什么我们着迷于“腐味”？</span>
+            </div>
+            <div class="analysis-container">
+                <div class="analysis-content">
+                    <h3>打破性别框架的情感共鸣</h3>
+                    <p>“腐味满满”的核心魅力在于它打破了传统异性恋的叙事框架，让男性之间的情感关系成为主角。这种视角的转换，往往能更纯粹地展现人物内心的挣扎、渴望与牺牲。</p>
+                    <br>
+                    <h3>禁忌与反差的张力</h3>
+                    <p>在许多耽美作品中，两个男性角色的身份地位、性格特质往往存在巨大的反差（如：清冷学霸 vs. 嚣张校霸）。这种“反差萌”和“禁忌感”是制造强烈戏剧冲突和吸引读者的关键元素，让情感的流动更加跌宕起伏。</p>
+                </div>
+                <aside class="analysis-sidebar">
+                    <h3>腐文化心理</h3>
+                    <p class="quote">“爱没有性别，只有灵魂的契合。”</p>
+                    <p>对于受众而言，这种文化提供了一种安全的情感投射空间，让我们在现实生活中压抑的情感得以释放，体验那种超越世俗偏见的极致浪漫。</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="container" id="faq">
+            <div class="section-header">
+                <h2 class="section-title">常见问题</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">什么是“腐文化”？</div>
+                    <div class="faq-answer">腐文化主要指喜爱并关注男性之间恋爱关系（Boys' Love，简称BL）的亚文化群体。他们通常欣赏男性角色之间的情感互动，并创作、传播相关内容。</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">“腐味满满”是指作品质量吗？</div>
+                    <div class="faq-answer">通常情况下，“腐味满满”是一个形容词，用来形容作品中的情感浓度高、CP感强、或者氛围非常适合腐向受众阅读或观看。它不代表作品本身的质量，更多是描述一种特定的氛围。</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">观看这些内容需要注意什么？</div>
+                    <div class="faq-answer">建议在正规渠道观看或阅读，支持正版创作者。同时，由于部分作品可能包含成人向内容，请根据个人年龄和喜好理性选择。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于腐味满满</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">合作联系</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>内容分类</h4>
+                    <ul>
+                        <li><a href="#">影视推荐</a></li>
+                        <li><a href="#">小说连载</a></li>
+                        <li><a href="#">同人图集</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社区</h4>
+                    <ul>
+                        <li><a href="#">加入讨论组</a></li>
+                        <li><a href="#">投票活动</a></li>
+                        <li><a href="#">失物招领</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 腐味满满. All Rights Reserved. 本站内容仅供交流学习使用.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+
+        function toggleFaq(element) {
+            // Close other items
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
